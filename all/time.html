@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Real time Timer</title>
+</head>
+
+<body>
+    <h1> currect time</h1>
+    <span id="hours"> 00</span>
+    <span> : </span>
+    <span id="minutes"> 00</span>
+    <span> : </span>
+    <span id="seconds"> 00</span>
+    <span id="section"> AM </span>
+
+    <script>
+        function displayTime() {
+            let dateTime = new Date();
+            let hrs = dateTime.getHours();
+            let mun = dateTime.getMinutes();
+            let sec = dateTime.getSeconds();
+
+
+            document.getElementById('section')
+            if (section > 12) {
+                section.innerHTML = "PM"
+            }
+
+
+            document.getElementById('hours').innerHTML = hrs;
+            document.getElementById('minutes').innerHTML = mun;
+            document.getElementById('seconds').innerHTML = sec;
+
+        }
+
+        setInterval(displayTime)
+    </script>
+</body>
+
+</html>

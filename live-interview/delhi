@@ -1,0 +1,19 @@
+console.log('Start');
+setTimeout(() => {
+console.log('setTimeout');
+}, 0);
+setInterval(() => {
+console.log('setInterval');
+clearInterval(this); // stop after first call
+}, 0);
+setImmediate(() => {
+console.log('setImmediate');
+});
+process.nextTick(() => {
+console.log('process.nextTick');
+});
+Promise.resolve().then(() => {
+console.log('Promise.then');
+});
+console.log('End');
+

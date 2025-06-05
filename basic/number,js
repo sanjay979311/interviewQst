@@ -1,0 +1,36 @@
+
+
+let output = '';
+
+for (let i = 1; i <= 100; i++) {
+  output += i + '\t';
+  if (i % 10 === 0) {
+    output += '\n';
+  }
+}
+
+console.log(output);
+
+// ------------------------------------------------- second -----------------------------------
+
+let res = ""
+for (let i = 1; i <= 100; i++) {
+   res += i + "\t"
+    if (i % 10 == 0) {
+        console.log(res); 
+        res = ""
+    }
+}
+
+
+
+// ------------------ or ------------------
+
+for(let i = 1; i <= 100; i++) {
+    let row = "";
+    for(let j = 0; j < 10; j++) {
+        row += (i + j) + "\t";
+    }
+    console.log(row);
+    i += 9; // Move to the next set of 10 numbers
+}

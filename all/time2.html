@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Time</title>
+</head>
+<body>
+    <h1>Current Time</h1>
+    <span id="currentTime">00:00:00 AM</span>
+
+    <script>
+        setInterval(() => {
+            let time = new Date().toLocaleTimeString();
+            document.getElementById('currentTime').textContent = time;
+        }, 1000);
+    </script>
+</body>
+</html>

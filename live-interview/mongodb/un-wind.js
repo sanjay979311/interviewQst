@@ -1,0 +1,21 @@
+db.orders.aggregate([
+{
+    $lookup:{
+        from:"inventory",
+        localField:"item",
+        foreignField:"sku",
+        as:"itemDetails"
+    }
+},
+{
+    $unwind:"$itemDetails"
+},
+{
+    $project:{
+        sku:"$itemDetails.sku",
+        desc:"$itemDetails.description",
+        stock:"$itemDetails.instock"
+    }
+}
+
+])
