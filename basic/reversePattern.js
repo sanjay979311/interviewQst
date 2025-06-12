@@ -22,3 +22,25 @@ for(let i=1;i<=5;i++){
      console.log(result)
 }
 
+// ---------------------------------------
+
+let output = "";
+
+for(let i=5;i>=1;i--){
+    
+    for(let j=1;j<=i;j++){
+         output+=j
+    }
+     output+= "\n"
+}
+
+console.log(output)
+
+/*
+ 12345
+1234
+123
+12
+1
+*/
+
