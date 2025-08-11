@@ -33,3 +33,29 @@ db.emp_dept.aggregate([
     }
   }
 ])
+
+
+// ------------------------------------second way------------------------------------
+
+db.emp_dept.aggregate([
+{
+       $lookup:{
+           from:"emp",
+           localField:"_id",
+           foreignField:"departmentId",
+           as:"employee"
+       }
+   },
+   {
+       $unwind:"$employee"
+   },
+   {
+       $group:{
+           _id:"$name",
+           department:{$sum:1},
+           totalSalary:{$sum:"$employee.salary"},
+           employeeDetail:{$push:"$$ROOT"}
+       },
+   }
+
+])

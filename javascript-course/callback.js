@@ -13,6 +13,8 @@ function displayDetail(data){
 }
 let result = dataFetching(displayDetail)
 
+// ------------------------------2-----------------------------
+
 function greet(name,calback){
     console.log("my name is:",name)
     calback()

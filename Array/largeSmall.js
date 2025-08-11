@@ -1,4 +1,4 @@
-let arr = [20 , 5,1,9,8,2,3,7,19,15];
+let arr = [20,5,1,9,8,2,3,7,19,15];
 
 function largeAmall(arr){
     arr.sort((a,b) => a -b)
